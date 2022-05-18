@@ -1,9 +1,15 @@
-.form-container {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
+.sign-up-form {
+    margin: 20px 40px;
+    width: 333px;
 
-span {
-    font-size: 20px;
+    .form-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 20px 0;
+    }
+
+    span {
+        font-size: 18px;
+    }
 }
