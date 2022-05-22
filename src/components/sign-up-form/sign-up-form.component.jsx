@@ -4,7 +4,6 @@ import { createAuthUserWithEmailAndPassword, createUserDocumentFromAuth } from "
 import FormInput from "../form-input/form-input.component"
 import Button from "../button/button.component"
 
-
 const defaultFormFields = {
     displayName: "",
     email: "",
@@ -22,12 +21,12 @@ const SignUpForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault()
 
-        if (password !== confrimPassword) {
-            alert("passwords do not match")
-            return;
-        }
-        if (password.length < 6 || confrimPassword.length < 6) {
+        if (!password || !confrimPassword || !email || !displayName) {
+            alert("Please enter the required fields")
+        } else if (password.length < 6 || confrimPassword.length < 6) {
             alert("Password should be at least 6 characters")
+        } else if (password !== confrimPassword) {
+            alert("passwords do not match")
         }
         try {
             const { user } = await createAuthUserWithEmailAndPassword(email, password)
@@ -56,13 +55,13 @@ const SignUpForm = () => {
         <div className="sign-up-form">
             <h2>Don't have an account?</h2>
             <span>Sign up with your email and passsword</span>
-            <form className="form-container" onSubmit={handleSubmit}>
+            <form className="form-container">
                 <FormInput label="Display name" type="text" required name="displayName" value={displayName} onChange={handleChange} />
                 <FormInput label="Email" type="email" required name="email" value={email} onChange={handleChange} />
                 <FormInput label="Password" type="password" required name="password" value={password} onChange={handleChange} />
                 <FormInput label="Confirm password" type="password" required name="confrimPassword" value={confrimPassword} onChange={handleChange} />
             </form>
-            <Button type="submit">Sign up</Button>
+            <Button type="submit" onClick={handleSubmit}>Sign up</Button>
         </div>
     )
 }
