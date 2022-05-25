@@ -11,15 +11,20 @@ nav {
         }
     }
 
-    .nav-link {
-        text-decoration: none;
-        color: black;
-        margin: 5px;
-        padding: 10px;
-        cursor: pointer;
+    .nav-links-container {
+        display: flex;
+        align-items: center;
 
-        &:hover {
-            color: lighten($color: black, $amount: 40);
+        .nav-link {
+            text-decoration: none;
+            color: black;
+            margin: 5px;
+            padding: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: lighten($color: black, $amount: 40);
+            }
         }
     }
 }
