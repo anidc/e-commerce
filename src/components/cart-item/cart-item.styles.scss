@@ -1,0 +1,23 @@
+.cart-item-container {
+    height: 70px;
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+
+    img {
+        height: 100%;
+        width: 60px;
+        overflow-x: hidden;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
+        ;
+    }
+
+    .cart-item-details {
+        text-align: start;
+        margin-left: 10px;
+    }
+}

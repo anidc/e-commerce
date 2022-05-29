@@ -14,3 +14,9 @@ code {
 * {
   box-sizing: border-box;
 }
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0 7.5px;
+  }
+}
