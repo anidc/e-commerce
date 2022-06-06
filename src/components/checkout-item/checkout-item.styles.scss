@@ -1,0 +1,43 @@
+.product-tr {
+    height: 150px;
+    text-align: center;
+
+    img {
+        height: 150px;
+    }
+
+    i {
+        cursor: pointer;
+
+        &:hover {
+            color: lighten($color: #000000, $amount: 60%);
+        }
+    }
+}
+
+.product-tr:hover {
+    background-color: #fafafa;
+    transition: 0.2s ease-in-out;
+}
+
+.product-tr {
+    td:first-child {
+        width: 110px;
+        overflow: hidden;
+        height: 150px;
+
+        img {
+            min-height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
+    }
+}
+
+.product-tr {
+    td:last-child {
+        width: 80px;
+
+    }
+}

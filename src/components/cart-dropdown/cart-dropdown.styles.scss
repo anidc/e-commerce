@@ -16,11 +16,6 @@
         z-index: 5;
         transition: 0.3s ease-in-out;
 
-        .empty-message {
-            font-size: 18px;
-            margin: 50px auto;
-
-        }
 
         .cart-items {
             height: 270px;
@@ -30,8 +25,21 @@
 
         }
 
-        button {
+        .empty-message {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+        }
+
+        .checkout-button-link {
             margin-top: 10px;
+            width: 100%;
+            text-decoration: none;
+
+            Button {
+                width: 100%;
+            }
         }
     }
 }
