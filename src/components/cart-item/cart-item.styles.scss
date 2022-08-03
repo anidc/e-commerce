@@ -1,19 +1,26 @@
 .cart-item-container {
-    height: 70px;
+    height: 90px;
     display: flex;
     justify-content: start;
     margin-bottom: 10px;
 
-    img {
-        height: 100%;
-        width: 60px;
-        overflow-x: hidden;
+    .image-div {
+        // min-width: 70px;
+        max-width: 70px;
+        overflow: hidden;
+        height: 90px;
+
+        img {
+            min-height: 100%;
+            width: 100%;
+            object-fit: cover;
+
+        }
     }
 
     h3 {
         margin: 0;
         padding: 0;
-        ;
     }
 
     .cart-item-details {
